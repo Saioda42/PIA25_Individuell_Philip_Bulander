@@ -17,7 +17,16 @@ VALUES
 ('ElectroTV 50"', 3, 'ETV50-007', 2021, 699.99, 36, 'TV', 15),
 ('ElectroTV 65"', 3, 'ETV65-008', 2022, 999.99, 36, 'TV', 10),
 ('ElectroSpeaker', 3, 'ES-009', 2023, 199.99, 12, 'Audio', 30),
-('ElectroCamera', 3, 'EC-010', 2020, 449.99, 24, 'Camera', 12);
+('ElectroCamera', 3, 'EC-010', 2020, 449.99, 24, 'Camera', 12),
+('BudgetPhone 1', 1, 'BP1-011', 2023, 499.99, 12, 'Smartphone', 100),
+('BudgetTablet 1', 2, 'BT1-012', 2022, 799.99, 12, 'Tablet', 50),
+('BudgetSpeaker', 3, 'BS-013', 2023, 299.99, 6, 'Audio', 30),
+('MidPhone 1', 1, 'MP1-014', 2023, 1499.99, 24, 'Smartphone', 40),
+('MidTablet 2', 2, 'MT2-015', 2022, 2499.99, 18, 'Tablet', 20),
+('MidCamera', 3, 'MC-016', 2021, 3999.99, 24, 'Camera', 15),
+('PremiumPhone X', 1, 'PPX-017', 2023, 6999.99, 24, 'Smartphone', 10),
+('PremiumLaptop Z', 2, 'PLZ-018', 2023, 8999.99, 36, 'Laptop', 5),
+('PremiumTV 75"', 3, 'PTV75-019', 2023, 10999.99, 36, 'TV', 8);
 
 --Customers
 INSERT INTO Customers (first_name, last_name, email, phone, city)
@@ -33,16 +42,23 @@ VALUES
 --Orders
 INSERT INTO Orders (customer_id, order_date, total_amount, status, shipping_city)
 VALUES
-(1, '2024-01-15', 8999.99, 'Pending', 'Stockholm'),  
-(2, '2023-07-22', 1049.98, 'Delivered', 'Göteborg'),
-(3, '2022-02-10', 1149.98, 'Delivered', 'Malmö'),
-(4, '2023-06-05', 899.98, 'Pending', 'Uppsala'),    
-(5, '2024-03-12', 449.99, 'Shipped', 'Västerås'),
-(1, '2022-11-18', 549.98, 'Delivered', 'Stockholm'),
-(2, '2023-04-27', 1249.98, 'Shipped', 'Göteborg'),
-(3, '2023-07-08', 399.98, 'Delivered', 'Malmö'),
-(4, '2023-09-15', 699.98, 'Pending', 'Uppsala'),
-(5, '2023-11-02', 299.98, 'Delivered', 'Västerås');
+(1, '2024-01-15', 8999.99, 'Pending', 'Stockholm'),
+(1, '2024-02-10', 2999.99, 'Delivered', 'Stockholm'),
+(1, '2024-05-22', 1499.99, 'Delivered', 'Stockholm'),
+(2, '2024-01-10', 799.99, 'Pending', 'Göteborg'),
+(2, '2024-04-11', 1299.49, 'Delivered', 'Göteborg'),
+(2, '2024-06-18', 499.00, 'Delivered', 'Göteborg'),
+(3, '2024-01-25', 999.00, 'Pending', 'Malmö'),
+(3, '2024-03-17', 599.99, 'Delivered', 'Malmö'),
+(4, '2024-01-02', 1199.00, 'Delivered', 'Uppsala'),
+(4, '2024-04-22', 799.00, 'Delivered', 'Uppsala'),
+(5, '2024-02-05', 349.00, 'Pending', 'Västerås'),
+(5, '2024-04-12', 999.00, 'Delivered', 'Västerås'),
+(1, '2024-06-01', 249.00, 'Delivered', 'Stockholm'),
+(2, '2024-06-20', 179.00, 'Pending', 'Göteborg'),
+(3, '2024-06-21', 429.00, 'Delivered', 'Malmö'),
+(4, '2024-06-22', 529.00, 'Pending', 'Uppsala'),
+(5, '2024-06-23', 389.00, 'Delivered', 'Västerås');
 
 --Order_items
 INSERT INTO Order_items (order_id, product_id, quantity, unit_price)
